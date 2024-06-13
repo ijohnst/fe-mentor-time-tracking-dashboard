@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="script.js" defer></script>
+
+</head>
+<body>
+<main>
+  <div class="grid-container">
+    <article class="profile">
+      <div class="profile--header flex wrapper">
+        <img src="./images/image-jeremy.png" alt="Jeremy Robson Headshot" class="profile--avatar">
+        <div class="profile--info">
+          <p>Report for</p>
+          <h1 class="profile--name">Jeremy Robson</h1>
+        </div>
+      </div>
+      <div class="profile--nav wrapper-sm">
+        <nav class="flex">
+         <button class="btn active" aria-pressed="true"  data-timeframe="daily">Daily</button>
+         <button class="btn" data-timeframe="weekly">Weekly</button>
+         <button class="btn" data-timeframe="monthly">Monthly</button>
+        </nav>
+      </div>
+    </article>
+
+    <div class="cards"></div>
+  </div>
+</main>
+
+<template id="card-template">
+  <article class="card">
+    <div class="card--body wrapper-md">
+      <div class="card--header flex">
+        <h3 class="card--title"></h3>
+        <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="">
+        </div>
+        <div class="card--time flex">
+          <div class="card--current-time"></div>
+          <div class="card--previous-time"></div>
+        </div>
+    </div>
+  </article>
+</template>
+
+</body>
+</html>
